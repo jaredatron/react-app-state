@@ -17,6 +17,7 @@ export async function login(){
 }
 
 export async function logout(){
+  console.trace('WTF logged out?')
   setState({
     username: undefined,
     sessionKey: undefined,

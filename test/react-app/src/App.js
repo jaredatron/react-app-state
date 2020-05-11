@@ -16,8 +16,8 @@ export default function App(){
     <div className="App">
       <div>{location.pathname}</div>
       <button onClick={rerender}>rerender {n}</button>
-      <Counter />
-      <Counter />
+      <Counter index={1} />
+      <Counter index={2} />
       <p>
         <Link href="/one">one</Link>{' / '}
         <Link href="/two">two</Link>{' / '}
