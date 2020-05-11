@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 import Counter from './components/Counter'
+import CatFacts from './components/CatFacts'
 
 function App() {
   console.log(`👍 <App/> render`)
@@ -11,6 +12,7 @@ function App() {
       <button onClick={rerender}>rerender {n}</button>
       <Counter />
       <Counter />
+      <CatFacts />
     </div>
   );
 }

@@ -1,4 +1,13 @@
-import { useAppState, useAppActions, defineActions } from 'react-app-state'
+import {
+  useAppState,
+  useAppActions,
+  defineActions,
+  // initState,
+} from 'react-app-state'
+
+// initState({
+//   counter: 0,
+// })
 
 defineActions({
   counter: {
