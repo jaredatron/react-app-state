@@ -10,7 +10,7 @@ export default function CatFacts() {
   return (
     <div className="CatFacts">
       {loadingCatFactsError
-        ? <span>ERROR Loading cat facts! {loadingCatFactsError}</span>
+        ? <span>ERROR Loading cat facts! {`${loadingCatFactsError}`}</span>
         : (loadingCatFacts || !catFacts)
           ? <span>Loading cat facts…</span>
           : <span>found {catFacts.length} cat facts</span>
