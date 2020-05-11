@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./scripts/test"
+    "test": "./scripts/test",
+    "build": "./scripts/build"
   },
   "repository": {
     "type": "git",
@@ -24,9 +25,19 @@
     "url": "https://github.com/deadlyicon/react-app-state/issues"
   },
   "homepage": "https://github.com/deadlyicon/react-app-state#readme",
+  "main": "dist/index.js",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.6"
   }
 }
