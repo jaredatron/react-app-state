@@ -1,31 +1,22 @@
-import {
-  useAppState,
-  useAppActions,
-  defineActions,
-  // initState,
-} from 'react-app-state'
+import { createResource } from 'react-app-state'
 
-// initState({
-//   counter: 0,
-// })
+const { getState, setState, useState } = createResource()
 
-defineActions({
-  counter: {
-    inc(){
-      const { total = 0 } = this.getState()
-      this.setState({ total: total + 1 })
-    },
-    dec(){
-      const { total = 0 } = this.getState()
-      this.setState({ total: total - 1 })
-    },
-  },
+getState({
+  total: 0,
 })
 
+function inc(){
+  const { total = 0 } = getState()
+  setState({ total: total + 1 })
+}
+
+function dec(){
+  const { total = 0 } = getState()
+  setState({ total: total - 1 })
+}
+
 export function useCounter(componentName){
-  const { total = 0 } = useAppState(['total'])
-  const { appAction } = useAppActions(componentName)
-  const inc = appAction('counter.inc')
-  const dec = appAction('counter.dec')
+  const { total = 0 } = useState(['total'])
   return { total, inc, dec }
 }
