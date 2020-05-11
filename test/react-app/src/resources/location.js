@@ -1,7 +1,7 @@
 import querystring from 'querystring'
 import { createResource } from 'react-app-state'
 
-const { setState, useState } = createResource()
+export const { getState, setState, useState } = createResource()
 
 class Location {
   constructor({pathname, query}){

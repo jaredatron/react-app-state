@@ -1,7 +1,7 @@
 import { createResource } from 'react-app-state'
 import wait from '../lib/wait'
 import { setLocation } from './location'
-const { getState, setState, useState } = createResource()
+export const { getState, setState, useState } = createResource()
 
 export async function login(){
   if (getState().loggingIn) return

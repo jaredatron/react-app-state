@@ -1,6 +1,6 @@
 import { createResource } from 'react-app-state'
 
-const { getState, setState, useState } = createResource()
+export const { getState, setState, useState } = createResource()
 
 setState({ total: 0 })
 

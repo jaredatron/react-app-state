@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { createResource } from 'react-app-state'
 
-const { getState, setState, useState } = createResource()
+export const { getState, setState, useState } = createResource()
 
 export async function loadCatFacts(){
   if (getState().loadingCatFacts) return
@@ -28,8 +28,8 @@ export function useCatFacts(){
     'catFacts',
   ])
   useEffect(
-    () => { loadCatFacts() },
-    [],
+    () => { if (!catFacts) loadCatFacts() },
+    [catFacts],
   )
   return {
     loadingCatFacts,

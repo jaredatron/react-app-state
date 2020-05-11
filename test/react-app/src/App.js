@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import './debug'
 import { useLocation } from './resources/location'
 import { useCurrentUser, login, logout } from './resources/session'
 import Counter from './components/Counter'
